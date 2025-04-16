@@ -1,5 +1,13 @@
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 #content{
     width: 100%;
     height: calc(100vh - 300px);
     background-color: white;
+    flex: 1;
 }
+

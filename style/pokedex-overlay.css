@@ -1,0 +1,136 @@
+header{
+    position: relative;
+    height: 200px;
+    width: 100%;
+    background-color: #e83030;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.395);
+    z-index: 1;
+}
+
+.header-middle-desgin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.middle-container{
+    display: flex;
+    justify-content: center;
+    width: 230px;
+    background-color: #282828;
+    height: 200px;
+}
+
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    background-color: #282828;
+    border-radius: 100%;
+    position: absolute;
+}
+
+.inner-circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    background-color: #595959;
+    border-radius: 100%
+}
+
+.inner-circle-texture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 210px;
+    background-color: #282828;
+    border-radius: 100%
+}
+
+.green-led{
+    width: 160px;
+    height: 40px;
+    background-color: #54ee69;
+    border-radius: 20px;
+    border: 0;
+}
+
+.green-led:hover{
+    box-shadow: 2px 2px 10px 2px #54ee69;
+    transition: 0.2s;
+}
+
+.header-infos{
+    padding: 0 40px;
+    color: white;
+    margin: 0;
+}
+
+.header-infos p{
+    font-size: 24px;
+    margin: 0;
+    text-align: end;
+}
+
+.closed-pokedex-overlay{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+    background-color: #e83030;
+}
+
+.second-middle-container{
+    display: flex;
+    justify-content: center;
+    width: 230px;
+    background-color: #282828;
+    height: 200px;
+}
+
+.round-edge{
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    width: 230px;
+    height: 75px;
+    background-color: #282828;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+}
+
+.round-edge h1{
+    font-size: 79px;
+    margin: 0;
+    color:  #f9be28;
+    text-decoration: underline;
+}
+
+.info-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.overlay-footer{
+    width: 100%;
+}
+
+.footer-box{
+    position: absolute;
+    bottom: 0px;
+    width: 80%;
+    height: 50px;
+    background-color: #282828;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}

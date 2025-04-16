@@ -4,42 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeDex</title>
-    <link rel="stylesheet" href="./styles/fonts.css">
-    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style/pokedex-overlay.css">
+    <link rel="stylesheet" href="./style/fonts.css">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./styles/standart.css">
-    <link rel="stylesheet" href="./styles/header.css">
-    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./style/standart.css">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <script src="./script.js"></script>
 </head>
 <body>
-    <header>
-        <div class="header-middle-desgin">
-            <div class="header-infos">
-                <p>GESEHEN</p>
-                <p>....................</p>
-                <p>[000]</p>
-            </div>
-            <div class="middle-container">
-                <div class="circle">
-                    <div class="inner-circle">
-                        <div class="inner-circle-texture">
-                            <input class="green-led" type="text">
+    <div id="content">
+        <div class="closed-pokedex-overlay">
+            <div class="header-middle-desgin">
+                <div class="middle-container">
+                    <div class="circle">
+                        <div class="inner-circle">
+                            <div class="inner-circle-texture">
+                               <div class="green-led"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="header-infos">
-                <p>GEFANGEN</p>
-                <p>....................</p>
-                <p>[000]</p>
+            <div class="second-middle-container"></div>
+            <div class="round-edge">
+                <h1>POKeDEX</h1>
             </div>
+            <div class="info-container">
+                <div class="header-infos">
+                    <p>GESEHEN</p>
+                    <p>....................</p>
+                    <p>[000]</p>
+                </div>
+                <div class="header-infos">
+                    <p>GEFANGEN</p>
+                    <p>....................</p>
+                    <p>[000]</p>
+                </div>
+            </div>
+            <div class="footer-box"></div>
         </div>
-    </header>
-    <div id="content">
         <h1>DAS WIRD EIN POKEDEX</h1>
     </div>
-    <footer>
-        <div class="footer-box"></div>
-    </footer>
 </body>
 </html>
