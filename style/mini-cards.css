@@ -7,3 +7,33 @@
     width: 200px;
     background-color: gray;
 }
+
+.id-conatiner{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.id-conatiner img{
+    height: 16px;
+}
+
+.id-name-section{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+.types-section{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.type-image-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}

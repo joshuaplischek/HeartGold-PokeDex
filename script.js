@@ -9,11 +9,10 @@ async function fetchPokeApi() {
     let link = await (await fetch('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0')).json();
     let results = link.results
     let promises = results.map(result => fetchSinglePokemons(result.url));
-    await Promise.all(promises); 
-    getSinglePokemonData(results)
+    await Promise.all(promises);
 }
 
-function getSinglePokemonData(results) {
+async function getSinglePokemonData(results) {
     for (let i = 0; i < results.length; i++) {
         const element = results[i].url;
         fetchSinglePokemons(element)
@@ -36,7 +35,7 @@ function getPokemonId(pokemon , name) {
     getPokemonTypes(pokemon ,id, name)
 }
 
-function getPokemonTypes(pokemon ,id, name) {
+function getPokemonTypes(pokemon, id, name) {
     let types = pokemon.types;
     let dataArray = {id, name, types}
     pokemonDatas.push(dataArray)
