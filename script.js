@@ -46,15 +46,34 @@ function renderPokeDexCards() {
     for (let indexPokemon = 0; indexPokemon < pokemonDatas.length; indexPokemon++) {
         const element = pokemonDatas[indexPokemon].types;
         contetRef.innerHTML += renderCardsTemplate(indexPokemon);
+        let card = document.getElementById(`miniPokeCard${indexPokemon}`);
         let typeRef = document.getElementById(`pokemonTypes${indexPokemon}`);
         for (let indexType = 0; indexType < element.length; indexType++) {
             const typeElement = element[indexType].type.name;
             let translated = translateType(typeElement);
-            typeRef.innerHTML += renderTypesTemplate(translated);
+            typeRef.innerHTML += renderTypesTemplate(translated, indexPokemon, indexType);
+            colorTypes(indexPokemon, indexType, typeElement);
+            colorCard(card, element);
         }
     }
 }
 
 function translateType(type) {
     return pokemonTypeTranslater[type] || type;
+}
+
+function checkColorType(type) {
+    return pokemonColor[type]
+}
+
+function colorCard(card, types){
+    let colorOne = pokemonColor[types[0].type.name];
+    let colorTwo = types[1] ? pokemonColor[types[1].type.name] : colorOne;
+    card.style.background = `linear-gradient(${colorOne}, ${colorTwo})`;
+}
+
+function colorTypes(i, indexType, pokemonType) {
+    let typeDiv = document.getElementById(`typeContainer${i}-${indexType}`)
+    let colored = checkColorType(pokemonType);
+    typeDiv.style.background += colored;
 }

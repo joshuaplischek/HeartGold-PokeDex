@@ -1,6 +1,6 @@
 function renderCardsTemplate(i) {
     return/*html*/`
-        <div class="mini-card">
+        <div class="mini-card" id="miniPokeCard${i}">
             <div class="id-name-section">
                 <div class="pokemon-name">
                     <p>${pokemonDatas[i].name.value.name}</p>
@@ -19,8 +19,8 @@ function renderCardsTemplate(i) {
     `
 }
 
-function renderTypesTemplate(translated){
+function renderTypesTemplate(translated, i, indexType){
     return/*html*/`
-        <div class="types"><p>${translated}</p></div>
+        <div id="typeContainer${i}-${indexType}" class="types" ><p>${translated}</p></div>
     `
 }
