@@ -2,7 +2,7 @@ function renderCardsTemplate(i) {
     return/*html*/`
         <div class="mini-card">
             <div class="id-name-section">
-                <div>
+                <div class="pokemon-name">
                     <p>${pokemonDatas[i].name.value.name}</p>
                 </div>
                 <div class="id-conatiner">
@@ -12,7 +12,8 @@ function renderCardsTemplate(i) {
             </div>
             <div class="type-image-section">
                 <div class="types-section" id="pokemonTypes${i}"></div>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i + 1}.png" alt="">
+                <div><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i + 1}.png" alt="">
+                </div>
             </div>
         </div>
     `

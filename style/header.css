@@ -1,7 +1,7 @@
-header{
+header{display: flex;
     position: relative;
-    display: flex;
     align-items: center;
+    top: 0;
     height: 50px;
     width: 100%;
     background-color: #e83030;
