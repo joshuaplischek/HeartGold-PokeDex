@@ -5,8 +5,13 @@ body{
 }
 
 #content{
-    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: calc(100% - 40px);
+    padding: 20px;
     height: calc(100vh - 300px);
     background-color: white;
     flex: 1;
+    display: none;
+    gap: 25px;
 }

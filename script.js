@@ -43,13 +43,18 @@ function getPokemonTypes(pokemon ,id, name) {
 }
 
 function renderPokeDexCards() {
+    let contetRef = document.getElementById(`content`)
     for (let indexPokemon = 0; indexPokemon < pokemonDatas.length; indexPokemon++) {
         const element = pokemonDatas[indexPokemon].types;
-        renderCardsTemplate()
+        contetRef.innerHTML += renderCardsTemplate(indexPokemon)
+        let typeRef = document.getElementById(`pokemonTypes${indexPokemon}`)
         for (let indexType = 0; indexType < element.length; indexType++) {
-            const typeElement = element[indexType];
-            console.table(typeElement);
-            renderTypesTemplate()
+            const typeElement = element[indexType].type.name;
+            let translated = translateType(typeElement)
+            typeRef.innerHTML += renderTypesTemplate(translated)
         }
     }
 }
+
+function translateType(type) {
+    return pokemonTypeTranslater[type] || type;}
