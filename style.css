@@ -2,9 +2,11 @@ body{
     display: flex;
     flex-direction: column;
     height: calc(100vh- 50px);
+    overflow: hidden;
 }
 
 #content{
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: calc(100% - 40px);
@@ -12,6 +14,5 @@ body{
     height: 100%;
     background-color: white;
     flex: 1;
-    display: none;
     gap: 25px;
 }
