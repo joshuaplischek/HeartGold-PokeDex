@@ -10,7 +10,7 @@ function renderCardsTemplate(i) {
                     <p>${pokemonDatas[i].id.value}</p>
                 </div>
             </div>
-            <div class="type-image-section">
+            <div class="type-image-section" id="idImage${i}">
                 <div class="types-section" id="pokemonTypes${i}"></div>
                 <div><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i + 1}.png" alt="">
                 </div>
